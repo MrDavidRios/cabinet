@@ -1,0 +1,16 @@
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #afafaf;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(196, 196, 196);
+}

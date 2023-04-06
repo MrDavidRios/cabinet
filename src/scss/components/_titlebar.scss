@@ -1,0 +1,53 @@
+@use '../variables' as *;
+
+#appWrapper {
+	height: 100%;
+
+	display: grid;
+	grid-template-rows: 40px auto;
+
+	background-color: $background-color;
+}
+
+#titlebar {
+	height: 40px;
+	background-color: $middle-color;
+
+	display: grid;
+	grid-template-columns: auto min-content;
+
+	#draggable {
+		-webkit-app-region: drag;
+	}
+
+	#windowControlButtons {
+		width: min-content;
+
+		display: grid;
+		grid-auto-flow: column;
+
+		div {
+			width: 40px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			img {
+				filter: $gray-filter;
+
+				width: 16px;
+				height: 16px;
+			}
+
+			&#maximizeButton img {
+				width: 14px;
+				height: 14px;
+			}
+
+			&:hover {
+				background-color: $light-foreground-color;
+			}
+		}
+	}
+}
