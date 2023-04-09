@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&family=Inter:wght@100;200;300;400&family=Lato&family=Roboto:wght@300;400&display=swap");
 @use '../variables' as *;
+#appContent {
+  background-color: #1a1a1a;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 30vw auto; }
+
+#sidebar {
+  background-color: #202020; }
+
+@use '../variables' as *;
 #appWrapper {
   height: 100%;
   display: grid;
@@ -8,7 +18,7 @@
 
 #titlebar {
   height: 40px;
-  background-color: #222222;
+  background-color: #252525;
   display: grid;
   grid-template-columns: auto min-content; }
   #titlebar #draggable {

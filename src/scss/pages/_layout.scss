@@ -1,0 +1,17 @@
+@use '../variables' as *;
+
+#appContent {
+	background-color: $background-color;
+
+	height: 100%;
+
+	display: grid;
+	grid-template-columns: 30vw auto;
+}
+
+#sidebar {
+	background-color: $middle-color;
+}
+
+#listContent {
+}
