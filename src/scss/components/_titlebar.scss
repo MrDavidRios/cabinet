@@ -40,9 +40,12 @@
 				height: 16px;
 			}
 
-			&#maximizeButton img {
-				width: 14px;
-				height: 14px;
+			&#maximizeButton,
+			&#resizeButton {
+				img {
+					width: 14px;
+					height: 14px;
+				}
 			}
 
 			&:hover {

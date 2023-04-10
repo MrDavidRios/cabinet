@@ -36,7 +36,12 @@ export function Titlebar() {
 					<img alt='Minimize Window Button' src={minimizeIcon} />
 				</div>
 				{maximized ? (
-					<div id='resizeButton'>
+					<div
+						id='resizeButton'
+						onClick={() => {
+							window.windowControl.unmaximize();
+						}}
+					>
 						<img alt='Resize Window Button' src={resizeIcon} />
 					</div>
 				) : (

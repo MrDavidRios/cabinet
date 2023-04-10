@@ -9,6 +9,10 @@
 #sidebar {
   background-color: #202020; }
 
+#listContent {
+  display: flex;
+  flex-direction: column; }
+
 @use '../variables' as *;
 #appWrapper {
   height: 100%;
@@ -36,7 +40,7 @@
         filter: invert(70%) sepia(0%) saturate(1%) hue-rotate(158deg) brightness(88%) contrast(90%);
         width: 16px;
         height: 16px; }
-      #titlebar #windowControlButtons div#maximizeButton img {
+      #titlebar #windowControlButtons div#maximizeButton img, #titlebar #windowControlButtons div#resizeButton img {
         width: 14px;
         height: 14px; }
       #titlebar #windowControlButtons div:hover {

@@ -5,7 +5,10 @@ import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-insta
 function createWindow() {
 	const win = new BrowserWindow({
 		width: 800,
+		minWidth: 600,
+
 		height: 600,
+		minHeight: 400,
 
 		frame: false,
 
@@ -26,6 +29,10 @@ function createWindow() {
 
 	ipcMain.handle('maximize', () => {
 		return win.maximize();
+	});
+
+	ipcMain.handle('unmaximize', () => {
+		return win.unmaximize();
 	});
 
 	ipcMain.handle('close', () => {

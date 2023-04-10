@@ -5,6 +5,7 @@ const { contextBridge, ipcRenderer } = require('electron');
 contextBridge.exposeInMainWorld('windowControl', {
 	isMaximized: () => ipcRenderer.invoke('is-maximized'),
 	maximize: () => ipcRenderer.invoke('maximize'),
+	unmaximize: () => ipcRenderer.invoke('unmaximize'),
 	minimize: () => ipcRenderer.invoke('minimize'),
 	close: () => ipcRenderer.invoke('close')
 });
