@@ -1,0 +1,31 @@
+@use '../variables' as *;
+
+#sidebar {
+	display: grid;
+	grid-template-rows: 40px auto;
+
+	background-color: $middle-color;
+
+	#sidebarToobar {
+		display: flex;
+		align-items: center;
+	}
+
+	#sidebarGroupList {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+
+		div {
+			width: 100%;
+			margin: 0 10px 0 10px;
+			border-radius: 5px;
+
+			background-color: $foreground-color;
+
+			&:hover {
+				background-color: $light-foreground-color;
+			}
+		}
+	}
+}

@@ -64,6 +64,10 @@ function createWindow() {
 	}
 }
 
+ipcMain.handle('get-path', (event, filename) => {
+	return app.getPath('userData') + `\\${filename}`;
+});
+
 app.whenReady().then(() => {
 	// DevTools
 	installExtension(REACT_DEVELOPER_TOOLS)

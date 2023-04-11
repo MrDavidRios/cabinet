@@ -8,12 +8,3 @@
 	display: grid;
 	grid-template-columns: 30vw auto;
 }
-
-#sidebar {
-	background-color: $middle-color;
-}
-
-#listContent {
-	display: flex;
-	flex-direction: column;
-}

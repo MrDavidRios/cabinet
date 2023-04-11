@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import minimizeIcon from './icons/minimize.svg';
-import maximizeIcon from './icons/square.svg';
-import resizeIcon from './icons/copy.svg';
-import closeIcon from './icons/close.svg';
+import minimizeIcon from '../icons/minimize.svg';
+import maximizeIcon from '../icons/square.svg';
+import resizeIcon from '../icons/copy.svg';
+import closeIcon from '../icons/close.svg';
 
 export function Titlebar() {
 	useEffect(() => {
