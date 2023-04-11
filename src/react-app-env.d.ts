@@ -8,6 +8,7 @@ interface Window {
 		minimize: () => void;
 		close: () => void;
 	};
+
 	fileOperations: {
 		/** Writes the provided data to a file. The data must be in the format of a JSON string. */
 		writeFile: (path: string, data: string) => void;
@@ -16,5 +17,9 @@ interface Window {
 		readFile: (path: string) => string;
 
 		getPath: (path: string) => string;
+	};
+
+	browser: {
+		openExternal: (url: string) => void;
 	};
 }

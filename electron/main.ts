@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain } from 'electron';
+import { app, BrowserWindow, ipcMain, shell } from 'electron';
 import * as path from 'path';
 import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer';
 
@@ -66,6 +66,10 @@ function createWindow() {
 
 ipcMain.handle('get-path', (event, filename) => {
 	return app.getPath('userData') + `\\${filename}`;
+});
+
+ipcMain.handle('open-external', (event, url) => {
+	return shell.openExternal(url);
 });
 
 app.whenReady().then(() => {

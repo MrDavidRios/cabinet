@@ -72,7 +72,7 @@ function App() {
 				{groups && user ? (
 					<>
 						<Sidebar groups={groups} />
-						<LinksDisplay addLinkCallback={updateGroup} tabGroup={groups[getSelectedIdx(groups, user.selectedTabGroupId)]} />
+						<LinksDisplay updateGroupCallback={updateGroup} addGroupCallback={addGroup} removeGroupCallback={removeGroup} tabGroup={groups[getSelectedIdx(groups, user.selectedTabGroupId)]} />
 					</>
 				) : (
 					<h3 id='loadingIndicator'>Loading...</h3>

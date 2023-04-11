@@ -1,16 +1,19 @@
+@use '../variables' as *;
+
 ::-webkit-scrollbar {
-  width: 12px;
+	width: 10px;
+	padding-right: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+	background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #afafaf;
-  border-radius: 15px;
+	background: $dark-gray;
+	border-radius: 15px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(196, 196, 196);
+	background: $gray;
 }

@@ -31,3 +31,8 @@ contextBridge.exposeInMainWorld('fileOperations', {
 	getPath: (filename: string) => ipcRenderer.invoke('get-path', filename)
 });
 //#endregion
+
+//#region Browser
+contextBridge.exposeInMainWorld('browser', {
+	openExternal: (url: string) => ipcRenderer.invoke('open-external', url)
+});

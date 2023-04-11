@@ -12,3 +12,8 @@ export async function getTitle(url: string): Promise<string> {
 			return title.innerText;
 		});
 }
+
+export function validUrl(url: string): boolean {
+	const pattern = /^(http|https):\/\/([\w-]+(\.[\w-]+)+)([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?$/;
+	return pattern.test(url);
+}

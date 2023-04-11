@@ -9,20 +9,44 @@
 @use '../variables' as *;
 #listContent {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  max-height: calc(100vh - 80px);
+  padding: 20px; }
   #listContent p {
     text-align: center;
     color: #999999; }
+  #listContent .link {
+    color: #64edd4; }
   #listContent #announcementText {
     padding: 30px 40px 0 40px; }
   #listContent #tabTitleLoadingIndicator {
-    margin-top: 20px !important;
+    margin: 20px 0 30px 0 !important;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; }
-    #listContent #tabTitleLoadingIndicator .loading-indicator span {
-      background-color: #999999 !important; }
+    gap: 10px; }
+    #listContent #tabTitleLoadingIndicator .loading-indicator {
+      margin-top: 20px !important; }
+      #listContent #tabTitleLoadingIndicator .loading-indicator span {
+        background-color: #64edd4 !important; }
+  #listContent .link-card {
+    background-color: #252525;
+    min-height: 60px;
+    padding: 10px 14px 10px 14px;
+    align-items: center;
+    display: grid;
+    gap: 10px;
+    border-radius: 10px; }
+    #listContent .link-card p {
+      text-align: left; }
+    #listContent .link-card .title {
+      color: #c4c4c4;
+      font-size: 16px; }
+    #listContent .link-card .subtitle {
+      color: #999999;
+      font-size: 14px; }
 
 @use '../variables' as *;
 #appWrapper {
@@ -60,35 +84,50 @@
 @use '../variables' as *;
 #sidebar {
   display: grid;
-  grid-template-rows: 40px auto;
-  background-color: #202020; }
-  #sidebar #sidebarToobar {
+  grid-template-columns: 40px auto;
+  background-color: #202020;
+  border-right: 2px solid #252525; }
+  #sidebar #sidebarToolbar {
     display: flex;
-    align-items: center; }
+    justify-content: center;
+    padding-top: 5px;
+    border-right: 2px solid #252525; }
+    #sidebar #sidebarToolbar #addGroupButton img {
+      filter: invert(70%) sepia(0%) saturate(1%) hue-rotate(158deg) brightness(88%) contrast(90%);
+      width: 28px;
+      height: 28px; }
   #sidebar #sidebarGroupList {
     display: flex;
     flex-direction: column;
-    gap: 5px; }
+    gap: 5px;
+    padding: 10px;
+    align-items: center; }
     #sidebar #sidebarGroupList div {
       width: 100%;
       margin: 0 10px 0 10px;
       border-radius: 5px;
-      background-color: #252525; }
+      background-color: #2c2c2c;
+      color: #c4c4c4;
+      padding: 4px;
+      text-align: center;
+      font-size: 16px; }
       #sidebar #sidebarGroupList div:hover {
-        background-color: #2c2c2c; }
+        filter: brightness(1.15); }
 
+@use '../variables' as *;
 ::-webkit-scrollbar {
-  width: 12px; }
+  width: 10px;
+  padding-right: 10px; }
 
 ::-webkit-scrollbar-track {
   background: transparent; }
 
 ::-webkit-scrollbar-thumb {
-  background: #afafaf;
+  background: #3e3e3e;
   border-radius: 15px; }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #c4c4c4; }
+  background: #999999; }
 
 :root {
   font-family: 'Inter', sans-serif; }

@@ -2,13 +2,28 @@
 
 #sidebar {
 	display: grid;
-	grid-template-rows: 40px auto;
+	grid-template-columns: 40px auto;
 
 	background-color: $middle-color;
 
-	#sidebarToobar {
+	border-right: 2px solid $foreground-color;
+
+	#sidebarToolbar {
 		display: flex;
-		align-items: center;
+		justify-content: center;
+
+		padding-top: 5px;
+
+		border-right: 2px solid $foreground-color;
+
+		#addGroupButton {
+			img {
+				filter: $gray-filter;
+
+				width: 28px;
+				height: 28px;
+			}
+		}
 	}
 
 	#sidebarGroupList {
@@ -16,15 +31,23 @@
 		flex-direction: column;
 		gap: 5px;
 
+		padding: 10px;
+		align-items: center;
+
 		div {
 			width: 100%;
 			margin: 0 10px 0 10px;
 			border-radius: 5px;
 
-			background-color: $foreground-color;
+			background-color: $light-foreground-color;
+			color: $light-gray;
+
+			padding: 4px;
+			text-align: center;
+			font-size: 16px;
 
 			&:hover {
-				background-color: $light-foreground-color;
+				filter: brightness(1.15);
 			}
 		}
 	}
