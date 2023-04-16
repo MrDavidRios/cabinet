@@ -1,8 +1,7 @@
 @use '../variables' as *;
 
 ::-webkit-scrollbar {
-	width: 10px;
-	padding-right: 10px;
+	width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -15,5 +14,5 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: $gray;
+	background: $middle-gray;
 }

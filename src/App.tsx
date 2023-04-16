@@ -65,14 +65,32 @@ function App() {
 		saveTabData(updatedGroups);
 	}
 
+	function updateSelectedGroupIdx(index: number) {
+		if (!user || !groups) return;
+
+		const updatedUser = structuredClone(user);
+		updatedUser.selectedTabGroupId = groups[index].id;
+
+		setUser(updatedUser);
+	}
+
+	const selectedIdx = groups && user ? getSelectedIdx(groups, user.selectedTabGroupId) : 0;
+
 	return (
 		<div id='appWrapper'>
 			<Titlebar></Titlebar>
 			<div id='appContent'>
 				{groups && user ? (
 					<>
-						<Sidebar updateGroupCallback={updateGroup} addGroupCallback={addGroup} removeGroupCallback={removeGroup} groups={groups} />
-						<LinksDisplay updateGroupCallback={updateGroup} addGroupCallback={addGroup} removeGroupCallback={removeGroup} tabGroup={groups[getSelectedIdx(groups, user.selectedTabGroupId)]} />
+						<Sidebar
+							updateGroupCallback={updateGroup}
+							addGroupCallback={addGroup}
+							removeGroupCallback={removeGroup}
+							groups={groups}
+							selectedGroupIdx={selectedIdx}
+							updateSelectedGroupCallback={updateSelectedGroupIdx}
+						/>
+						<LinksDisplay updateGroupCallback={updateGroup} addGroupCallback={addGroup} removeGroupCallback={removeGroup} tabGroup={groups[selectedIdx]} />
 					</>
 				) : (
 					<h3 id='loadingIndicator'>Loading...</h3>

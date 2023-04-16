@@ -1,0 +1,35 @@
+@use '../variables' as *;
+
+.dropdown {
+	position: absolute;
+
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+	background-color: $light-foreground-color;
+
+	border-radius: 6px;
+	overflow: hidden;
+
+	display: flex;
+
+	z-index: 999;
+
+	div {
+		display: flex;
+		align-items: center;
+
+		padding: 5px 7px 5px 5px;
+		gap: 6px;
+
+		color: $light-gray;
+		font-size: 14px;
+
+		img {
+			width: 18px;
+			filter: $red-filter;
+		}
+
+		&:hover {
+			background-color: $dark-gray;
+		}
+	}
+}

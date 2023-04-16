@@ -84,9 +84,13 @@ export const LinksDisplay = (props: {
 				)
 			) : (
 				<>
-					{tabGroup.tabs.map((tab, idx) => {
-						return <LinkCard key={idx} tab={tab} />;
-					})}
+					{tabGroup.tabs.length > 0 ? (
+						tabGroup.tabs.map((tab, idx) => {
+							return <LinkCard key={idx} tab={tab} />;
+						})
+					) : (
+						<p id='announcementText'>No tabs in this group. Add some tabs!</p>
+					)}
 				</>
 			)}
 		</div>
