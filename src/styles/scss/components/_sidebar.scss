@@ -34,7 +34,7 @@
 		padding: 10px;
 		align-items: center;
 
-		div {
+		.sidebar-group {
 			width: 100%;
 			margin: 0 10px 0 10px;
 			border-radius: 5px;
@@ -44,7 +44,20 @@
 
 			padding: 4px;
 			text-align: center;
-			font-size: 16px;
+			font-size: 14px;
+
+			input {
+				width: 100%;
+				border: none;
+				background-color: transparent;
+				color: $light-gray;
+				font-size: 14px;
+				text-align: center;
+
+				&:focus {
+					outline: none;
+				}
+			}
 
 			&:hover {
 				filter: brightness(1.15);

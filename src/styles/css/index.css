@@ -33,7 +33,6 @@
         background-color: #64edd4 !important; }
   #listContent .link-card {
     background-color: #252525;
-    min-height: 60px;
     padding: 10px 14px 10px 14px;
     align-items: center;
     display: grid;
@@ -102,7 +101,7 @@
     gap: 5px;
     padding: 10px;
     align-items: center; }
-    #sidebar #sidebarGroupList div {
+    #sidebar #sidebarGroupList .sidebar-group {
       width: 100%;
       margin: 0 10px 0 10px;
       border-radius: 5px;
@@ -110,8 +109,17 @@
       color: #c4c4c4;
       padding: 4px;
       text-align: center;
-      font-size: 16px; }
-      #sidebar #sidebarGroupList div:hover {
+      font-size: 14px; }
+      #sidebar #sidebarGroupList .sidebar-group input {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        color: #c4c4c4;
+        font-size: 14px;
+        text-align: center; }
+        #sidebar #sidebarGroupList .sidebar-group input:focus {
+          outline: none; }
+      #sidebar #sidebarGroupList .sidebar-group:hover {
         filter: brightness(1.15); }
 
 @use '../variables' as *;

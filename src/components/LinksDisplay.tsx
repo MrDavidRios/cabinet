@@ -35,6 +35,10 @@ export const LinksDisplay = (props: {
 				e.stopPropagation();
 
 				const url = e.dataTransfer.getData('text/plain');
+				const droppedUrl = e.dataTransfer.getData('text/uri-list');
+				const droppedTitle = e.dataTransfer.getData('text/plain');
+
+				console.log(droppedUrl, droppedTitle);
 
 				if (!validUrl(url)) return;
 

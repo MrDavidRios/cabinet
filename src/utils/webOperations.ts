@@ -7,6 +7,8 @@ export async function getTitle(url: string): Promise<string> {
 			return '';
 		})
 		.then((data) => {
+			if (data === '') return 'No title found';
+
 			const doc = new DOMParser().parseFromString(data, 'text/html');
 			const title = doc.querySelectorAll('title')[0];
 			return title.innerText;

@@ -71,7 +71,7 @@ function App() {
 			<div id='appContent'>
 				{groups && user ? (
 					<>
-						<Sidebar groups={groups} />
+						<Sidebar updateGroupCallback={updateGroup} addGroupCallback={addGroup} removeGroupCallback={removeGroup} groups={groups} />
 						<LinksDisplay updateGroupCallback={updateGroup} addGroupCallback={addGroup} removeGroupCallback={removeGroup} tabGroup={groups[getSelectedIdx(groups, user.selectedTabGroupId)]} />
 					</>
 				) : (
