@@ -1,0 +1,12 @@
+.editable-text {
+	width: 100%;
+	border: none;
+	background-color: transparent;
+	color: $light-gray;
+	font-size: 14px;
+	text-align: center;
+
+	&:focus {
+		outline: none;
+	}
+}

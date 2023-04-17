@@ -72,19 +72,6 @@
 			text-align: center;
 			font-size: 14px;
 
-			input {
-				width: 100%;
-				border: none;
-				background-color: transparent;
-				color: $light-gray;
-				font-size: 14px;
-				text-align: center;
-
-				&:focus {
-					outline: none;
-				}
-			}
-
 			&:hover,
 			&.selected {
 				background-color: $dark-gray;

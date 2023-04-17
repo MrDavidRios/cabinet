@@ -85,6 +85,7 @@ export const GroupElement = (props: {
 			>
 				{showInput && isComponentVisible ? (
 					<input
+						className='editable-text'
 						onKeyDown={(e) => {
 							if (e.key === 'Enter') {
 								// give me regex to check if title is valid. Any text symbol is allowed.

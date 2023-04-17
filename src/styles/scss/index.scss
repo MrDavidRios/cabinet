@@ -12,6 +12,8 @@
 @import 'components/sidebar';
 @import 'components/scrollbar';
 @import 'components/dropdown';
+@import 'components/link-dialog';
+@import 'components/editable-text';
 
 :root {
 	font-family: 'Inter', sans-serif;
@@ -84,4 +86,31 @@ input[type='file'] {
 	color: white;
 
 	margin-top: 40px;
+}
+
+.backdrop {
+	width: 100vw;
+	height: 100vh;
+
+	background-color: black;
+	opacity: 0.5;
+
+	margin-top: 40px !important;
+}
+
+.fixed-centered {
+	position: fixed;
+
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	margin-top: 20px;
+}
+
+.floating-menu {
+	@extend .fixed-centered;
+
+	top: 30%;
+	transform: translate(-50%, -30%);
 }

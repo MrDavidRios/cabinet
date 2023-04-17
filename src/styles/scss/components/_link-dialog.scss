@@ -1,0 +1,64 @@
+@use '../variables' as *;
+
+#linkDialog {
+	height: calc(50vh);
+	width: 90vw;
+	max-height: 175px;
+	max-width: 650px;
+	background-color: $foreground-color;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+
+	display: grid;
+	grid-template-rows: 70px 40px 40px;
+
+	text-align: center;
+	align-items: center;
+
+	color: $gray;
+
+	#title,
+	#url,
+	#subtitle {
+		input {
+			color: $gray !important;
+			font-size: 16px;
+			text-align: left;
+		}
+	}
+
+	.header {
+		display: grid;
+		align-items: center;
+		grid-template-columns: auto min-content;
+
+		.title {
+			text-align: center;
+			margin-left: calc(30px + 20px);
+
+			font-size: 24px;
+		}
+
+		.close-menu-btn {
+			margin-right: 20px;
+
+			img {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+
+	.property-wrapper {
+		display: flex;
+		gap: 10px;
+		margin: auto;
+	}
+
+	img {
+		width: 20px;
+		height: 20px;
+
+		filter: $gray-filter;
+	}
+}
