@@ -17,6 +17,10 @@ export const LinksDisplay = (props: {
 	const [newTab, setNewTab] = useState(new Tab('', '', ''));
 	const [showLinkDialog, setShowLinkDialog] = useState(true);
 
+	const hideLinkDialog = () => {
+		setShowLinkDialog(false);
+	};
+
 	return (
 		<>
 			<div
@@ -67,7 +71,7 @@ export const LinksDisplay = (props: {
 					</>
 				)}
 			</div>
-			{showLinkDialog ? <ModifyLinkDialog tab={newTab} /> : <></>}
+			{showLinkDialog ? <ModifyLinkDialog tab={newTab} closeDialog={hideLinkDialog} /> : <></>}
 		</>
 	);
 };

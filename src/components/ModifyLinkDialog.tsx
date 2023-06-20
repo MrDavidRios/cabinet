@@ -4,7 +4,7 @@ import descriptionIcon from '../icons/description.svg';
 import closeIcon from '../icons/close.svg';
 import { EditableText } from './EditableText';
 
-export const ModifyLinkDialog = (props: { tab: Tab }) => {
+export const ModifyLinkDialog = (props: { tab: Tab, closeDialog: () => void }) => {
 	const tab = new Tab('http://www.link.com', 'Article Title', 'Added at 11/27, 11:59 PM');
 
 	return (
@@ -16,7 +16,7 @@ export const ModifyLinkDialog = (props: { tab: Tab }) => {
 						<EditableText id='title' text={tab.title} onEdit={() => {}} />
 					</div>
 					<div className='close-menu-btn'>
-						<img src={closeIcon} alt='Close menu' />
+						<img onClick={props.closeDialog} src={closeIcon} alt='Close menu' />
 					</div>
 				</div>
 				<div className='property-wrapper'>
